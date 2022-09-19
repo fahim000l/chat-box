@@ -6,12 +6,23 @@ document.getElementById('login-btn').addEventListener('click', function () {
     let passwordIn = document.getElementById('password-in');
     let passwordText = passwordIn.value;
 
-    if (emailText == 'fahim' && passwordText == '12345') {
+    if ((emailText == 'fahim' && passwordText == '12345') || (emailText == 'rafin' && passwordText == '123456789')) {
         // setUserName('fahim');
 
-        window.location.href = "chat.html"
+        if (emailText == 'fahim') {
 
-        localStorage.setItem('Profile', 'Fahim');
+            window.location.href = "chat.html"
+
+            localStorage.setItem('Profile', 'Fahim');
+        }
+        else {
+
+            window.location.href = "chat.html"
+
+            localStorage.setItem('Profile', 'Rafin');
+        }
+
+
         // let compressedFunc = localStorage.getItem('compressedFunc');
         // let setName = eval('(' + compressedFunc + ')');
         // setName();
@@ -23,4 +34,4 @@ document.getElementById('login-btn').addEventListener('click', function () {
     }
 });
 
-window.localStorage.setItem('profile', setName('fahim'));
+// window.localStorage.setItem('profile', setName('fahim'));
